@@ -81,15 +81,12 @@ const FilmContainer = () => {
     }
 
     return (
-        <>
         <div className="container">
             <h1>Database of Movies on our site</h1>
             <Film film={films[currentFilmIndex]} />
             <button onClick={handlePreviousButtonClick}>Previous Film</button>
             <button onClick={handleNextButtonClick}>Next Film</button>
         </div>
-            
-        </>
     )
 
 
