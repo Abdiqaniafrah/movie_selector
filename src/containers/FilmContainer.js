@@ -1,7 +1,8 @@
 import { useState } from "react";
+import Film from "../components/Film";
 
 
-const FilmContainer =() => {
+const FilmContainer = () => {
 
 
     const [films, setFilms] = useState (
@@ -67,6 +68,32 @@ const FilmContainer =() => {
     ]
 
     )
+
+    const [currentFilmIndex, setCurrentFilmIndex] = useState(0);
+
+
+    const handleNextButtonClick = () => {
+        setCurrentFilmIndex(currentFilmIndex + 1);
+    }
+
+    const handlePreviousButtonClick = () => {
+        setCurrentFilmIndex(currentFilmIndex -1);
+    }
+
+    return (
+        <>
+        <div className="container">
+            <h1>Database of Movies on our site</h1>
+            <Film film={films[currentFilmIndex]} />
+            <button onClick={handlePreviousButtonClick}>Previous Film</button>
+            <button onClick={handleNextButtonClick}>Next Film</button>
+        </div>
+            
+        </>
+    )
+
+
+
 }
 
 export default FilmContainer;
