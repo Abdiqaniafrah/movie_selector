@@ -1,0 +1,14 @@
+const FIlm = ({film}) => {
+
+
+return (
+    <>
+    
+    
+    
+    </>
+)
+
+
+
+}
